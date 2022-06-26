@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<title>Cat Adoption Prediction</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<style>
+    h1, h2, h3 {
+        text-align: center;
+        font-family: 'NanumSquareRoundL';
+    }
+</style>
+</head>
+<body>
+    <h1>새로 입소한 고양이의 입양 예측 결과</h1>
+
+    {%if pred == 1%}
+    <h2> 이 고양이는 입양 확률이 높은 것으로 예측됩니다. 😻</h2>
+
+    {%else%}
+    <h2> 이 고양이는 입양 확률이 낮은 것으로 예측됩니다. 😿</h2>
+    <h3> 고양이가 입양갈 수 있도록 더 신경써주세요. </h3>
+    {%endif%}
+</body>
+</html>

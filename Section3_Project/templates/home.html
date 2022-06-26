@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Cat Adoption Prediction</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>😺 유기묘 입양 예측 시스템 😺</h1>
+    <div class="card border-primary mb-3">
+        <span class="card-header">새로운 고양이 정보</span>
+        <div class="center">
+            <form action = "result" method="POST">
+                <table style="border:3px;">
+                    <tr>
+                        <td>이름 여부   </td>
+                        <td>
+                            <select class="form-select" name="name">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>성별/중성화여부  </td>
+                        <td>
+                            <select class="form-select" name="sex_upon_outcome">
+                                <option value="Neutered Male">Neutered Male</option>
+                                <option value="Intact Male">Intact Male</option>
+                                <option value="Spayed Female">Spayed Female</option>
+                                <option value="Intact Female">Intact Female</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>성별    </td>
+                        <td>
+                            <select class="form-select" name="sex">
+                                <option value='Female'>Female</option>
+                                <option value='Male'>Male</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>품종 여부   </td>
+                        <td>
+                            <select class="form-select" name="cfa_breed">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <!-- <tr>
+                        <td>코트 패턴   </td>
+                        <td><input type="text" placeholder="ex) tabby, no pattern" name="coat_pattern"></td>
+                    </tr> -->
+                    <tr>
+                        <td>패턴여부    </td>
+                        <td>
+                            <select class="form-select" name="pattern">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <!-- <tr>
+                        <td>생후 일수   </td>
+                        <td><input type="text" placeholder="정수로만 입력" name="age_days"></td>
+                    </tr> -->
+                    <tr>
+                        <td>Cat/Kitten/Neonatal  </td>
+                        <td>
+                            <select class="form-select" name="cat_kitten_neonatal">
+                                <option value="Neonatal">~생후 41일:Neonatal</option>
+                                <option value="Kitten">생후 42~364일:Kitten</option>
+                                <option value="Adult">생후 365일~:Adult</option>
+                            </select>
+                        </td>
+                    </tr>            
+                </table>
+                <div class="center" style="width:60px;"><input class="btn btn-primary" type = "submit" value = "확인" ></div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
